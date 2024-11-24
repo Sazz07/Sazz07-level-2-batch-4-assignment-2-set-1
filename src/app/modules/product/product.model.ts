@@ -48,23 +48,10 @@ export const productSchema = new Schema<TProduct>(
       required: [true, 'Stock status is required'],
       default: true,
     },
-    isDeleted: {
-      type: Boolean,
-      required: [true, 'Deletion status is required'],
-      default: false,
-    },
   },
   {
     timestamps: true,
     versionKey: false,
-    toJSON: {
-      virtuals: true,
-      transform: (doc, ret) => {
-        delete ret.isDeleted;
-        delete ret.id;
-        return ret;
-      },
-    },
   },
 );
 

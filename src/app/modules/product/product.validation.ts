@@ -41,11 +41,6 @@ const productValidationSchema = z.object({
       required_error: 'Stock status is required',
     })
     .default(true),
-  isDeleted: z
-    .boolean({
-      required_error: 'Deletion status is required',
-    })
-    .default(false),
 });
 
 export default productValidationSchema;
