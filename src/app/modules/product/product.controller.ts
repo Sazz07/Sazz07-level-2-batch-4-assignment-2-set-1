@@ -50,6 +50,14 @@ const getProduct = async (req: Request, res: Response) => {
     const { productId } = req.params;
     const result = await ProductServices.getProductFromDB(productId);
 
+    if (!result) {
+      res.status(404).json({
+        message: 'Book not found',
+        success: false,
+      });
+      return;
+    }
+
     res.status(200).json({
       message: 'Book retrieved successfully',
       success: true,
@@ -73,6 +81,14 @@ const updateProduct = async (req: Request, res: Response) => {
       updatedData,
     );
 
+    if (!result) {
+      res.status(404).json({
+        message: 'Book not found',
+        success: false,
+      });
+      return;
+    }
+
     res.status(200).json({
       message: 'Book updated successfully',
       success: true,
@@ -90,7 +106,15 @@ const updateProduct = async (req: Request, res: Response) => {
 const deleteProduct = async (req: Request, res: Response) => {
   try {
     const { productId } = req.params;
-    await ProductServices.deleteProductFromDB(productId);
+    const result = await ProductServices.deleteProductFromDB(productId);
+
+    if (!result) {
+      res.status(404).json({
+        message: 'Book not found',
+        success: false,
+      });
+      return;
+    }
 
     res.status(200).json({
       message: 'Book deleted successfully',
