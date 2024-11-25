@@ -19,7 +19,7 @@ Welcome to the Book Shop B4A2V1! This is a platform where users can manage a col
 
 ## Deployed URL
 
-https://mybook-store.vercel.app/
+https://book-store-lyart-eta.vercel.app/
 
 ## API Documentation
 
