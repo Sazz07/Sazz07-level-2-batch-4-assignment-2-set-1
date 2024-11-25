@@ -2,7 +2,7 @@
 
 Welcome to the Book Shop B4A2V1! This is a platform where users can manage a collection of books and place orders. It uses Express.js with TypeScript, integrated with MongoDB via Mongoose for managing products (books) and orders. The app supports various operations like adding, updating, deleting books, placing orders, and tracking revenue.
 
-#Key Features:
+## Key Features:
 
 - **Manage Books:** Users can create, update, retrieve, and delete books.
 - **Search Books:** Books can be searched by title, author, or category.
